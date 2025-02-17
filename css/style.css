@@ -8,10 +8,15 @@ h1 {
     font-size: 50px;
 }
 
-h2 {
+h2{
     color:#af50f2;
     font-family: "Lucida", monospace;
     font-size: 40px;
+}
+
+h3 {
+    color:#af50f2;
+    font-family: "Lucida", monospace;
 }
 
 p {
@@ -19,6 +24,7 @@ p {
     font-size: 20px;
 }
 
+/* NAV BAR AND LINKS */
 .navbar{
     font-family: "Lucida", monospace;
     font-size: 30px;
@@ -43,6 +49,11 @@ a:visited {
     color: #d28bf7;
 }
 
+#active{
+    color: #ff69b4;
+    text-decoration: underline;
+}
+
 a#specific:hover {
     color: #ff69b4;
     text-decoration: underline;
@@ -64,7 +75,8 @@ a#specific:hover {
     justify-content: space-between;
 }
 
-.leftcontainer {
+/* HOME PAGE CONTENT */
+.homeLeft {
     text-align: center;
     background-color: white;
     width: 65%;
@@ -74,7 +86,7 @@ a#specific:hover {
     border-radius: 15px;
 }
 
-.rightcontainer {
+.homeRight {
     text-align: center;
     background-color: white;
     width: 30%;
@@ -92,6 +104,29 @@ a#specific:hover {
     border-radius: 15px;
     padding: 10px;
     font-size: 20px;
+    margin: 20px;
+}
+
+/* EXEC BOARD CONTENT */
+.exec{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 23%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* CONTACT PAGE CONTENT */
+.contact{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {
