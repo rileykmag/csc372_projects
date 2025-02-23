@@ -1,37 +1,42 @@
-// // get meeting button and message
-// var questions = document.getElementsByClassName("questions");
-// var meetmessage = document.getElementById("meetText");
-
-// // update meeting message when button is clicked
-// questions[0].addEventListener("click", function() {
-//     meetmessage.innerHTML = "We meet on Wednesdays from 5-6pm in Tyler Hall Room 055!";
-// });
-
-// // get contact message and update it when button is clicked
-// var contactmessage = document.getElementById("contactText");
-// questions[1].addEventListener("click", function() {
-//     contactmessage.innerHTML = "You can contact us at uriswic@gmail.com and follow us on Instagram @uriswic!";
-// });
+//set question text visibility to none when page loads
+var question = $('#questionText'); // get the question text message to update it
+question.css('display', 'none');
 
 // get message and update it when button is clicked
+var buttons = $('.questions'); // get all buttons and store them
 function setActive(button) {
-    var buttons = document.querySelectorAll('.questions');
-    buttons.forEach(function(btn) {
-        btn.classList.remove('active');
+    buttons.each(function(index, btn) {
+        btn.classList.remove('active'); // bootstrap btn class
     });
-    button.classList.add('active');
+    button.classList.add('active'); // passed in button to function
 }
 
-// add event listeners for when the buttons are clicked
-var buttons = document.querySelectorAll('.questions');
-var question = document.getElementById('questionText');
-buttons.forEach(function(button, index) {
-    button.addEventListener('click', function() {
-        setActive(button);
-        if (index === 0) {
-            question.innerHTML = "We meet on Wednesdays from 5-6pm in Tyler Hall Room 055!";
-        } else if (index === 1) {
-            question.innerHTML = "You can contact us at uriswic@gmail.com and follow us on Instagram @uriswic!";
-        }
+buttons.each(function(index, button) { //swap forEach for .each() to use jQuery
+    $(button).on('click', function() { //event with jQuery instead of event handler
+        // //make the question text visible
+        // question.css('display', 'block');
+
+        setActive(button); // function from above to set active button
+        // have to slide up the question text before updating it
+        question.slideUp(1000, function(){
+
+            // update the question text based on the button clicked
+            // want the text to slide down and then slide up as the buttons are selected/swapped
+
+            //first question button selected
+            if (index === 0) {
+                question.html("We meet on Wednesdays from 5-6pm in Tyler Hall Room 055!"); //update with .html() instead of innerHTML
+                //slide the question text down 
+                question.slideDown(1000);
+            } 
+            //second question button selected
+            else if (index === 1) {
+                //slide the question text down 
+                question.html("You can contact us at uriswic@gmail.com and follow us on Instagram @uriswic!"); //update with .html() instead of innerHTML
+
+                question.slideDown(1000);
+            }
+        });
+
     });
 });

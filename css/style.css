@@ -107,6 +107,12 @@ a#specific:hover {
     margin: 20px;
 }
 
+#questionText{
+    background-color:#ffdbf8;
+    border-radius: 15px;
+    padding: 30px;
+}
+
 /* EXEC BOARD CONTENT */
 .exec{
     background-color: white;
