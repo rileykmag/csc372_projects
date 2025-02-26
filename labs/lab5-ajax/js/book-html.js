@@ -22,21 +22,21 @@ function xmlRequest(filePath) {
 
 var donImage = document.getElementById('don-quixote-img');
 donImage.addEventListener('click', function() {
-    xmlRequest('data/cervantes.html');
+    xmlRequest('data/cervantes-data.html');
     opacity();
     donImage.style.opacity = "1";
 });
 
 var cityImage = document.getElementById('two-cities-img');
 cityImage.addEventListener('click', function() {
-    xmlRequest('data/dickens.html');
+    xmlRequest('data/dickens-data.html');
     opacity();
     cityImage.style.opacity = "1";
 });
 
 var ringsImage = document.getElementById('lotr-img');
 ringsImage.addEventListener('click', function() {
-    xmlRequest('data/tolkien.html');
+    xmlRequest('data/tolkien-data.html');
     opacity();
     ringsImage.style.opacity = "1";
 });

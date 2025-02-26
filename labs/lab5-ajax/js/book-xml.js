@@ -24,10 +24,23 @@ function xmlRequest(filePath, subElements) {
         let description = books[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
 
         let book = document.createElement("div");
-        book.innerHTML = title + " by " + author + " (" + year + ") - " + genre + " - $" + price;
-        document.getElementById(subElements).appendChild(book);
+        book.innerHTML = "<h3>" + title + "</h3>" + "<p><strong>" + "Author: </strong>" Charles Dickens</p>
+<p><strong>Copies Sold: </strong>200 million</p>
     }
 
 
     xhr.open('GET', filePath, true);
 }
+
+/*
+<h3>A Tale of Two Cities</h3>
+<p><strong>Author: </strong>Charles Dickens</p>
+<p><strong>Copies Sold: </strong>200 million</p>
+<p>
+    The novel tells the story of the French Doctor Manette, 
+    his 18-year-long imprisonment in the Bastille in Paris, 
+    and his release to live in London with his daughter Lucie 
+    whom he had never met. The story is set against the conditions 
+    that led up to the French Revolution and the Reign of Terror.
+</p>
+*/
