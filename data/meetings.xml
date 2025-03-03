@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"  ?>
+<root>
+    <event>
+        <title>Product/Project Manager Panel</title>
+        <date>11/19/24</date>
+        <description>Hear from IGT professionals about their career paths, how a CS degree can fit into these roles, and enjoy a networking session with light refreshments.</description>
+    </event>
+    <event>
+        <title>Murder Mystery</title>
+        <date>02/05/25</date>
+        <description>Join us for a thrilling murder mystery event where you can put your detective skills to the test and enjoy an evening of suspense and fun.</description>
+    </event>
+    <event>
+        <title>LeetCode Practice</title>
+        <date>02/26/25</date>
+        <description>Join us for a session of LeetCode practice where you can improve your coding skills and prepare for technical interviews.</description>
+    </event>
+</root>

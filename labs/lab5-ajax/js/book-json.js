@@ -5,13 +5,24 @@ function opacity(){
     }
 }
 
-
-function xmlRequest(filePath) {
+function request(filePath, index) {
     let xhr = new XMLHttpRequest();
 
     xhr.onload = function(){
         if(xhr.status === 200){
-            document.getElementById('details').innerHTML = xhr.responseText;
+
+            var responseObject = JSON.parse(xhr.responseText);
+
+            var newData = '';
+
+            newData += '<h3>' + responseObject.books[index].title + '</h3>';
+            newData += '<p>' + responseObject.books[index].author + '</p>';
+            newData += '<p>' + responseObject.books[index].sold + '</p>';
+            newData += '<p>' + responseObject.books[index].description + '</p>'; 
+
+
+
+            document.getElementById('details').innerHTML = newData;
         }
     };
 
@@ -20,25 +31,24 @@ function xmlRequest(filePath) {
     xhr.send(null);
 }
 
+
 var donImage = document.getElementById('don-quixote-img');
 donImage.addEventListener('click', function() {
-    xmlRequest('data/cervantes-data.html');
+    request('data/book-data.json');
     opacity();
     donImage.style.opacity = "1";
 });
 
 var cityImage = document.getElementById('two-cities-img');
 cityImage.addEventListener('click', function() {
-    xmlRequest('data/dickens-data.html');
+    request('data/book-data.json');
     opacity();
     cityImage.style.opacity = "1";
 });
 
 var ringsImage = document.getElementById('lotr-img');
 ringsImage.addEventListener('click', function() {
-    xmlRequest('data/tolkien-data.html');
+    request('data/book-data.json');
     opacity();
     ringsImage.style.opacity = "1";
 });
-
-

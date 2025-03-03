@@ -1,0 +1,24 @@
+{
+    "exec":[
+        {
+            "name": "Riley Maguire",
+            "year": "Junior",
+            "major": "Major: Computer Science"
+        },
+        {
+            "name": "Ndoumbe Ndoye",
+            "year": "Junior",
+            "major": "Major: Computer Science and Economics"
+        },
+        {
+            "name": "Ayishat Oguntade",
+            "year": "Sophomore",
+            "major": "Major: Computer Science"
+        },
+        {
+            "name": "Sudishma Acharya",
+            "year": "Sophomore",
+            "major": "Major: Data Science and Finance"
+        }
+    ]
+}

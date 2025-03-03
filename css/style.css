@@ -75,6 +75,12 @@ a#specific:hover {
     justify-content: space-between;
 }
 
+li {
+    font-family: "Lucida", monospace;
+    color: #af50f2;
+    font-size: 20px;
+}
+
 /* HOME PAGE CONTENT */
 .homeLeft {
     text-align: center;
@@ -107,10 +113,46 @@ a#specific:hover {
     margin: 20px;
 }
 
+#moreEvent{
+    font-family: "Lucida", monospace;
+    background-color: #af50f2;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px;
+}
+
 #questionText{
     background-color:#ffdbf8;
     border-radius: 15px;
     padding: 30px;
+}
+
+/* ABOUT PAGE CONTENT */
+.fullContent{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+#historyButtons{
+    display: flex;
+    justify-content: center;
+}
+
+/* EVENT PAGE CONTENT */
+.eventContent{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
 /* EXEC BOARD CONTENT */
@@ -122,6 +164,16 @@ a#specific:hover {
     width: 23%;
     text-align: center;
     justify-content: center;
+}
+
+img {
+    border-radius: 15px;
+}
+
+#execClick{
+    color: white;
+    font-size:30px;
+    text-align: center;
 }
 
 /* CONTACT PAGE CONTENT */
