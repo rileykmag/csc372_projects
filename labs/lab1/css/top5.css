@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+ol{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+}
+
+img{
+    display: block;
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+}
+
+.artist{
+    border: 1px solid red;
+}
+
+.spotlight{
+    padding: 10px;
+    border: 3px dotted yellow;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
