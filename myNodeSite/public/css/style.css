@@ -1,0 +1,223 @@
+body {
+    background-color:#f7d0ec;
+}
+
+h1 {
+    color: white;
+    font-family: "Lucida", monospace;
+    font-size: 50px;
+}
+
+h2{
+    color:#af50f2;
+    font-family: "Lucida", monospace;
+    font-size: 40px;
+}
+
+h3 {
+    color:#af50f2;
+    font-family: "Lucida", monospace;
+}
+
+p {
+    font-family: "Lucida", "Courier", monospace;
+    font-size: 20px;
+}
+
+/* NAV BAR AND LINKS */
+.navbar{
+    font-family: "Lucida", monospace;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+a {
+    color: #af50f2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f7d0ec;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #d28bf7;
+}
+
+#active{
+    color: #ff69b4;
+    text-decoration: underline;
+}
+
+a#specific:hover {
+    color: #ff69b4;
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.header h1 {
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    font-family: "Lucida", monospace;
+    color: #af50f2;
+    font-size: 20px;
+}
+
+/* HOME PAGE CONTENT */
+.homeLeft {
+    text-align: center;
+    background-color: white;
+    width: 65%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.homeRight {
+    text-align: center;
+    background-color: white;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.questions{
+    font-family: "Lucida", monospace;
+    background-color: #af50f2;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#moreEvent{
+    font-family: "Lucida", monospace;
+    background-color: #af50f2;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#questionText{
+    background-color:#ffdbf8;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* ABOUT PAGE CONTENT */
+.fullContent{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+#historyButtons{
+    display: flex;
+    justify-content: center;
+}
+
+/* EVENT PAGE CONTENT */
+.eventContent{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* EXEC BOARD CONTENT */
+.exec{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 23%;
+    text-align: center;
+    justify-content: center;
+}
+
+img {
+    border-radius: 15px;
+}
+
+#execClick{
+    color: white;
+    font-size:30px;
+    text-align: center;
+}
+
+/* CONTACT PAGE CONTENT */
+.contact{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftcontainer, .rightcontainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
