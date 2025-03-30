@@ -1,0 +1,34 @@
+<title>{{ title }}</title>
+
+<div class="navbar">
+    <!-- navigation bar -->
+    <a href="index">Home</a>
+    <a href="about">About</a>
+    <a href="events">Events</a>
+    <a href="exec">Meet the Exec</a>
+    <a id="active" href="contact">Contact Us</a>
+</div>
+
+<br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>For more information about the Society for Computing, join our mailing list or follow us on Instagram below!</p>
+    </div>
+    <div class="row">
+        <div class="contact col-sm-6">
+            <h3>Join our email list here!</h3>
+            <form id="contact-form">
+                <p><label for="email" class="form-label">Email:</label></p>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact col-sm-6">
+            <p></p>
+        </div>
+    </div>
+</div>
+<script src="contact.js"></script>
