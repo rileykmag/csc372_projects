@@ -44,28 +44,28 @@ function request(filePath, index){
 //event listeners for each exec position for info to be displayed upon hover
 var pres = document.getElementById('president');
 pres.addEventListener('click', function() {
-    request('data/exec.json', 0);
+    request('exec.json', 0);
     visiblity();
     details[0].style.display = "block";
 });
 
 var vp = document.getElementById('vp');
 vp.addEventListener('click', function() {
-    request('data/exec.json', 1);
+    request('exec.json', 1);
     visiblity();
     details[1].style.display = "block";
 });
 
 var treas = document.getElementById('treasurer');
 treas.addEventListener('click', function() {
-    request('data/exec.json', 2);
+    request('exec.json', 2);
     visiblity();
     details[2].style.display = "block";
 });
 
 var sec = document.getElementById('secretary');
 sec.addEventListener('click', function() {
-    request('data/exec.json', 3);
+    request('exec.json', 3);
     visiblity();
     details[3].style.display = "block";
 });

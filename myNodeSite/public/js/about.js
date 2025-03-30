@@ -37,9 +37,9 @@ buttons.each(function(index, button) { //swap forEach for .each() to use jQuery
         setActive(button); // function from above to set active button
 
         if(index === 0){ //history button selected
-            xmlRequest('data/history.html');
+            xmlRequest('history.html');
         } else if(index === 1){//values button selected
-            xmlRequest('data/mission.html');
+            xmlRequest('mission.html');
         }
 
     });
@@ -50,5 +50,5 @@ $(document).ready(function() {
     var historyButton = buttons[0];
     setActive(historyButton);
     message.css('display', 'block');
-    xmlRequest('data/history.html');
+    xmlRequest('history.html');
 });

@@ -60,21 +60,21 @@ function xmlRequest(filePath,index) {
 
 var meeting1 = document.getElementById('meeting1');
 meeting1.addEventListener('click', function() {
-    xmlRequest('./data/meetings.xml', 0);
+    xmlRequest('meetings.xml', 0);
     opacity();
     meeting1.style.opacity = "1";
 });
 
 var meeting2 = document.getElementById('meeting2');
 meeting2.addEventListener('click', function() {
-    xmlRequest('./data/meetings.xml', 1);
+    xmlRequest('meetings.xml', 1);
     opacity();
     meeting2.style.opacity = "1";
 });
 
 var meeting3 = document.getElementById('meeting3');
 meeting3.addEventListener('click', function() {
-    xmlRequest('./data/meetings.xml', 2);
+    xmlRequest('meetings.xml', 2);
     opacity();
     meeting3.style.opacity = "1";
 });
