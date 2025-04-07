@@ -105,6 +105,7 @@ if (!empty($allErrors)) {
                 <?php
                 // display the status message from php validation at top
                 if (!empty($statusMessage)) {
+                    echo '<style>#php_form { display: none; }</style>';
                     echo '<div class="contact"><p>' . htmlspecialchars($statusMessage) . '</p></div>';
                 }
                 // set a cookie with the form's name if the form entry is valid AND there are no errors
@@ -141,7 +142,7 @@ if (!empty($allErrors)) {
                     session_unset();
                     // destroy the session
                     session_destroy();
-                    // refresh the page to reflect the changes and send back to original contact entry
+                    // redirect to the html page to refresh the session
                     header("Location: contact.html");
                     exit;
                 }
