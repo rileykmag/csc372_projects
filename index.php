@@ -1,3 +1,33 @@
+<?php
+//object for meetings
+class Meeting {
+    //data for meeting information
+    public $description;
+    public $date;
+    public $time;
+    public $location;
+
+    //constructor for meeting information
+    function __construct($description, $date, $time, $location) {
+        $this->description = $description;
+        $this->date = $date;
+        $this->time = $time;
+        $this->location = $location;
+    }
+
+    //function to get meeting details and display them
+    function getMeetingDetails() {
+        return "Description: " . $this->description . "<br>" .
+               "Date: " . $this->date . "<br>" .
+               "Time: " . $this->time . "<br>" .
+               "Location: " . $this->location;
+    }
+}
+
+// creating meeting objects
+$meeting1 = new Meeting("Study session", "April 9, 2025", "5-6 PM", "Tyler Hall Room 055");
+$meeting2 = new Meeting("Women in AI Workshop", "April 16, 2025", "4:30-6 PM", "Ballentine Hall Room 115");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +52,7 @@
 
     <div class="navbar">
         <!-- navigation bar -->
-        <a id="active" href="index.html">Home</a>
+        <a id="active" href="index.php">Home</a>
         <a href="about.html">About</a>
         <a href="events.html">Events</a>
         <a href="exec.html">Meet the Exec</a>
@@ -42,6 +72,15 @@
             <button class="questions btn" type="button">When do we meet?</button>
             <button class="questions btn" type="button">How to contact us?</button>
             <p id="questionText"></p>
+
+            <!-- display meeting details from PHP here using getMeetingDetails function -->
+            <div id="meetingDetails">
+                <h2>Upcoming Meetings</h2>
+                <p><?php echo $meeting1->getMeetingDetails(); ?></p>
+                <p><?php echo $meeting2->getMeetingDetails(); ?></p>
+            </div>
+
+
 
         </div>
 
