@@ -61,6 +61,7 @@ $meeting2 = new Meeting("Women in AI Workshop", "April 16, 2025", "4:30-6 PM", "
 
     <br>
 
+    
     <div class="content">
         <div class="homeLeft">
             <p>
