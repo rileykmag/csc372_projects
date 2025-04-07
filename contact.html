@@ -47,7 +47,24 @@
                 </form>
             </div>
             <div class="contact col-sm-6">
-                <p></p>
+                <form id="php_form">
+                    <!-- name -->
+                    <p><label for="name" class="form-label">Name:</label></p>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <!-- age -->
+                    <p><label for="age" class="form-label">Age:</label></p>
+                    <input type="number" class="form-control" id="age" name="age" required>
+                    <!-- options (year) -->
+                    <p><label for="year" class="form-label">Year:</label></p>
+                    <select class="form-select" id="year" name="year" required>
+                        <option value="" disabled selected>Select your year</option>
+                        <option value="Freshman">Freshman</option>
+                        <option value="Sophomore">Sophomore</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+                    <button type="submit" formaction="contact.php" formmethod="post">Submit</button>
+                </form>
             </div>
         </div>
     </div>
