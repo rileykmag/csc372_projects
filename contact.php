@@ -152,7 +152,7 @@ if (!empty($allErrors)) {
     </div>
 
     <footer>
-        <p>Author: Riley Maguire <a id="specific"href="mailto: riley_maguire@uri.edu">riley_maguire@uri.edu</a></p>
+        <p>Author: Riley <a id="specific"href="mailto: riley_maguire@uri.edu">riley_maguire@uri.edu</a></p>
     </footer>
     <script src="js/contact.js"></script>
 </body>
