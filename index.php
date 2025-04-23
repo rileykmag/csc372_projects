@@ -54,7 +54,7 @@ $meeting2 = new Meeting("Women in AI Workshop", "April 16, 2025", "4:30-6 PM", "
         <!-- navigation bar -->
         <a id="active" href="index.php">Home</a>
         <a href="about.html">About</a>
-        <a href="events.html">Events</a>
+        <a href="events.php">Events</a>
         <a href="exec.html">Meet the Exec</a>
         <a href="contact.html">Contact Us</a>
     </div>
