@@ -1,3 +1,17 @@
+<?php 
+
+//include database connection script
+require './includes/database-connection.php';
+
+//retrieve all of the info for the meetings
+$sql = "SELECT * 
+        FROM meetings";
+
+$meetings = pdo($pdo, $sql)->fetchAll();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +38,7 @@
         <!-- navigation bar -->
         <a href="index.php">Home</a>
         <a href="about.html">About</a>
-        <a id="active" href="events.html">Events</a>
+        <a id="active" href="events.php">Events</a>
         <a href="exec.html">Meet the Exec</a>
         <a href="contact.html">Contact Us</a>
     </div>
@@ -45,8 +59,18 @@
         </div>
     </div>
     <h2 class="meetingSection">All Meetings</h2>
+    <!-- display meetings database here!!!! -->
     <div class="content">
-        
+        <div id="dataMeeting">
+            <!-- display names and information for each meeting line -->
+            
+            <p><?= $meetings[0]['date'] . ": " . $meetings[0]['title'] . " at " . $meetings[0]['time'] . " in " . $meetings[0]['location'] . ". " . $meetings[0]['description']?></p>
+            <p><?= $meetings[1]['date'] . ": " . $meetings[1]['title'] . " at " . $meetings[1]['time'] . " in " . $meetings[1]['location'] . ". " . $meetings[1]['description']?></p>
+            <p><?= $meetings[2]['date'] . ": " . $meetings[2]['title'] . " at " . $meetings[2]['time'] . " in " . $meetings[2]['location'] . ". " . $meetings[2]['description']?></p>
+            <p><?= $meetings[3]['date'] . ": " . $meetings[3]['title'] . " at " . $meetings[3]['time'] . " in " . $meetings[3]['location'] . ". " . $meetings[3]['description']?></p>
+            <p><?= $meetings[4]['date'] . ": " . $meetings[4]['title'] . " at " . $meetings[4]['time'] . " in " . $meetings[4]['location'] . ". " . $meetings[4]['description']?></p>
+            <p><?= $meetings[5]['date'] . ": " . $meetings[5]['title'] . " at " . $meetings[5]['time'] . " in " . $meetings[5]['location'] . ". " . $meetings[5]['description']?></p>
+        </div>  
     </div>
 
     <footer>
