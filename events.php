@@ -3,12 +3,34 @@
 //include database connection script
 require './includes/database-connection.php';
 
-//retrieve all of the info for the meetings
-$sql = "SELECT * 
-        FROM meetings";
+// check if a specific meeting ID is provided in the query string
+if (isset($_GET['meeting_id']) && is_numeric($_GET['meeting_id'])) {
+    $meeting_id = $_GET['meeting_id'];
 
-$meetings = pdo($pdo, $sql)->fetchAll();
+    // prepare SQL query to fetch the specific meeting
+    $sql = "SELECT * FROM meetings WHERE id = :meeting_id";
+    $statement = pdo($pdo, $sql, ['meeting_id' => $meeting_id]);
+    $meeting = $statement->fetch();
 
+    // check if meeting found/exists
+    if ($meeting) {
+        $meetings = [$meeting];
+    } else {
+        //no meeting found, empty 
+        echo "<p>No meeting found with the specified ID.</p>";
+        $meetings = [];
+    }
+} else {
+    // no specific meeting ID provided->fetch all meetings
+    $sql = "SELECT * FROM meetings";
+    $statement = $pdo->query($sql);
+    $meetings = $statement->fetchAll();
+
+    if (!$meetings) {
+        // no meetings found in the database
+        echo "<p>No meetings found.</p>";
+    }
+}
 
 
 ?>
@@ -63,14 +85,9 @@ $meetings = pdo($pdo, $sql)->fetchAll();
     <div class="content">
         <div id="dataMeeting">
             <!-- display names and information for each meeting line -->
-            
-            <p><?= $meetings[0]['date'] . ": " . $meetings[0]['title'] . " at " . $meetings[0]['time'] . " in " . $meetings[0]['location'] . ". " . $meetings[0]['description']?></p>
-            <p><?= $meetings[1]['date'] . ": " . $meetings[1]['title'] . " at " . $meetings[1]['time'] . " in " . $meetings[1]['location'] . ". " . $meetings[1]['description']?></p>
-            <p><?= $meetings[2]['date'] . ": " . $meetings[2]['title'] . " at " . $meetings[2]['time'] . " in " . $meetings[2]['location'] . ". " . $meetings[2]['description']?></p>
-            <p><?= $meetings[3]['date'] . ": " . $meetings[3]['title'] . " at " . $meetings[3]['time'] . " in " . $meetings[3]['location'] . ". " . $meetings[3]['description']?></p>
-            <p><?= $meetings[4]['date'] . ": " . $meetings[4]['title'] . " at " . $meetings[4]['time'] . " in " . $meetings[4]['location'] . ". " . $meetings[4]['description']?></p>
-            <p><?= $meetings[5]['date'] . ": " . $meetings[5]['title'] . " at " . $meetings[5]['time'] . " in " . $meetings[5]['location'] . ". " . $meetings[5]['description']?></p>
-        </div>  
+            <?php foreach ($meetings as $meeting): ?>
+                <p><?= $meeting['date'] . ": " . $meeting['title'] . " at " . $meeting['time'] . " in " . $meeting['location'] . ". " . $meeting['description'] ?></p>
+            <?php endforeach; ?></div>  
     </div>
 
     <footer>
