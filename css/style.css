@@ -164,7 +164,7 @@ li {
     padding: 20px;
     margin: 20px auto;
     width: 100%;
-    text-align: left;
+    font-family: Lucida, monospace;
 }
 
 /* EXEC BOARD CONTENT */

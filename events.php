@@ -85,13 +85,36 @@ if (isset($_GET['meeting_id']) && is_numeric($_GET['meeting_id'])) {
     <div class="content">
         <div id="dataMeeting">
             <!-- display names and information for each meeting line -->
-            <?php foreach ($meetings as $meeting): ?>
-                <p><?= $meeting['date'] . ": " . $meeting['title'] . " at " . $meeting['time'] . " in " . $meeting['location'] . ". " . $meeting['description'] ?></p>
-            <?php endforeach; ?></div>  
+            <?php if (!empty($meetings)): ?>
+                <!-- use bootstrap table & add the font from the rest of the page -->
+                <table class="table table-striped" style="font-family: Lucida, monospace;"> 
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Time</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($meetings as $meeting): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($meeting['date']) ?></td>
+                                <td><?= htmlspecialchars($meeting['title']) ?></td>
+                                <td><?= htmlspecialchars($meeting['time']) ?></td>
+                                <td><?= htmlspecialchars($meeting['location']) ?></td>
+                                <td><?= htmlspecialchars($meeting['description']) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php endif ?>
+        </div>
     </div>
 
-    <footer>
-        <p>Author: Riley Maguire <a id="specific"href="mailto: riley_maguire@uri.edu">riley_maguire@uri.edu</a></p>
+    <footer style="clear: both; text-align: center; margin-top: 20px;">
+        <p>Author: Riley Maguire <a id="specific" href="mailto: riley_maguire@uri.edu">riley_maguire@uri.edu</a></p>
     </footer>
 
     <script src="js/events.js"></script>
